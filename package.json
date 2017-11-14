@@ -1,0 +1,25 @@
+{
+  "name": "friend_finder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dartanianbagby1/friend_finder.git"
+  },
+  "author": "John Dartanian Bagby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dartanianbagby1/friend_finder/issues"
+  },
+  "homepage": "https://github.com/Dartanianbagby1/friend_finder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "path": "^0.12.7"
+  }
+}
