@@ -4,7 +4,7 @@ var path = require("path");
 
 
 var app = express();
-var PORT = 3000;
+var PORT = process.env.PORT || 8080;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -61,6 +61,8 @@ app.post("/api/new",function(req,res){
 //	console.log(choice);
 //	res.end();
 //	});
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
 
 
