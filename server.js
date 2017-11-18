@@ -22,8 +22,8 @@ app.use(bodyParser.json());
 //	console.log(choice);
 //	res.end();
 //	});
-require("./routing/apiRoutes.js")(app);
-require("./routing/htmlRoutes.js")(app);
+require("../routing/apiRoutes.js")(app);
+require("../routing/htmlRoutes.js")(app);
 
 
 
