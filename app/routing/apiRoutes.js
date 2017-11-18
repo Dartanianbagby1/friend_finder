@@ -1,3 +1,7 @@
+
+module.exports = function(app) {
+
+
 var mysql = require("mysql");
 var connection = mysql.createConnection({
   host: "localhost",
@@ -11,7 +15,6 @@ connection.connect(function(err) {
   if (err) throw err;
 
 });
-module.exports = function(app) {
 
 	app.get("/api/friends", function(req, res) {
 				
@@ -34,5 +37,6 @@ module.exports = function(app) {
 				currentFriend = [parseInt(cf.q1), parseInt(cf.q2), parseInt(cf.q3), parseInt(cf.q4), parseInt(cf.q5), parseInt(cf.q6), parseInt(cf.q7), parseInt(cf.q8), parseInt(cf.q9), parseInt(cf.q10)];
 			
 					
-				});
+		});
 	});
+}
