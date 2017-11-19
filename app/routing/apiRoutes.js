@@ -1,3 +1,4 @@
+var connection = require("../database/connection.js")
 
 module.exports = function(app) {
 
