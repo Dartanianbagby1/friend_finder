@@ -1,7 +1,7 @@
 var connection = require("../database/connection.js")
 
 module.exports = function(app) {
-
+console.log('function(app)');
 	app.get("/api/friends", function(req, res) {
 				console.log("this is running - app.get('api/friends')");
 				connection.query("SELECT * FROM friend_list ", function(err, results){

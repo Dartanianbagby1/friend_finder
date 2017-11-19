@@ -20,7 +20,7 @@ var newFriend = [
     q10: 5
   }
 ];
-
+console.log('friends');
 
 // Note how we export the array. This makes it accessible to other files using require.
 module.exports = newFriend;
