@@ -10,6 +10,19 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 //======================================
 
+var mysql = require("mysql");
+var connection = mysql.createConnection({
+  host: "localhost",
+  port: 3000,
+  user: "root",
+  password: "",
+  database: "friends_db"
+});
+
+connection.connect(function(err) {
+  if (err) throw err;
+
+});
 //======================================
 
 
