@@ -4,8 +4,8 @@ USE friends_db;
 
 CREATE TABLE friend_list (
   friend_id INT(11) AUTO_INCREMENT NOT NULL,
-  friend_name VARCHAR(30) NOT NULL,
-  friend_photo_url VARCHAR(5000) NOT NULL,
+  friend_name VARCHAR(100) NOT NULL,
+  friend_photo_url VARCHAR(250) NOT NULL,
   q1 INT(11) NOT NULL,
   q2 INT(11) NOT NULL,
   q3 INT(11) NOT NULL,
