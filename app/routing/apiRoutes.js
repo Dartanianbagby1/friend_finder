@@ -38,11 +38,8 @@ module.exports = function(app) {
             }
             console.log("the insert into DB was successful from the route");
 
-            
-            
-            console.log("TRYING TO SEND MATCH");
             //	console.log(match);
-            analyzeData(friend_id,answerSum, function(match) {
+            analyzeData(results.insertId,answerSum, function(match) {
                 res.send(match);
             });
         }); //closes query
@@ -58,15 +55,15 @@ module.exports = function(app) {
         connection.query(query, function(err, data) {
             if (err) throw err;
                
-            var perMatch = (100 -Math.ABS((data.q_sum-answerSum)*2)) + "%";
+            var perMatch = (100 -Math.abs((data.q_sum-answerSum)*2)) + "%";
             console.log("Percent match = " + perMatch);
-            displayMatch(bFF, perMatch, cb);
+            displayMatch(friend_id, perMatch, cb);
         }); //closes query
     } // closes analyzeData
 
-    function displayMatch(bFF, perMatch, cb) {
-        console.log(bFF);
-        connection.query("SELECT friend_name, friend_photo_url FROM friend_list WHERE friend_id = ?", bFF, function(err, friends) {
+    function displayMatch(friend_id, perMatch, cb) {
+        console.log(friend_id);
+        connection.query("SELECT friend_name, friend_photo_url FROM friend_list WHERE friend_id = ?", friend_id, function(err, friends) {
             if (err) throw err;
             console.log("displayMatch running");
             console.log(friends);

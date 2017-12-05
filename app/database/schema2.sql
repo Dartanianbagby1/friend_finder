@@ -1,6 +1,6 @@
-DROP DATABASE if exists friends_db;
-CREATE DATABASE friends_db;
-USE friends_db;
+DROP DATABASE if exists tc3zp2hrkk60ub3v;
+CREATE DATABASE tc3zp2hrkk60ub3v;
+USE tc3zp2hrkk60ub3v;
 
 CREATE TABLE friend_list (
   friend_id INT(11) AUTO_INCREMENT NOT NULL,
@@ -16,6 +16,6 @@ CREATE TABLE friend_list (
   q8 INT(11) NOT NULL,
   q9 INT(11) NOT NULL,
   q10 INT(11) NOT NULL,
-  q_sum = q1+q2+q3+q4+q5+q6+q7+q8+q9+q10,
+  q_sum INT(11) NOT NULL,
   PRIMARY KEY (friend_id)
 );
